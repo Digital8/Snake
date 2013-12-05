@@ -2,7 +2,7 @@
 //  DBHelpViewController.h
 //  Classic Snake
 //
-//  Created by Daniel James on 11/10/12.
+//  Created by DBrus Media on 11/10/12.
 //  Copyright (c) 2012 developersBliss. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  DBGameViewController.h
 //  Snake
 //
-//  Created by Daniel James on 11/21/12.
+//  Created by Brus Media on 11/21/12.
 //  Copyright (c) 2012 developersBliss. All rights reserved.
 //
 

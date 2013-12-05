@@ -2,12 +2,14 @@
 //  DBAppDelegate.m
 //  Classic Snake
 //
-//  Created by Daniel James on 11/10/12.
+//  Created by Brus Media on 11/10/12.
 //  Copyright (c) 2012 developersBliss. All rights reserved.
 //
 #define APP_ID 578156833
 #import "DBAppDelegate.h"
 #import "Flurry.h"
+#import <MobileAppTracker/MobileAppTracker.h>
+
 
 @implementation DBAppDelegate {
 }
@@ -20,9 +22,16 @@ void uncaughtExceptionHandler(NSException *exception) {
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    [Flurry startSession:@"788BK29CQX89SNP7FHR7"];
+    [Flurry startSession:@"CCQYF2WGVFDTSPJRQZ6Z"];
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
+    
+    NSString * const MAT_CONVERSION_KEY = @"76b86c264a5c7e4392ddee7919c13cb0";
+    NSString * const MAT_ADVERTISER_ID = @"11722";
+    [[MobileAppTracker sharedManager] startTrackerWithMATAdvertiserId:MAT_ADVERTISER_ID
+                                                     MATConversionKey:MAT_CONVERSION_KEY];
+    
+    [[MobileAppTracker sharedManager] trackInstall];
     
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     BOOL settingsHaveBeenSet = [settings boolForKey:@"settings_have_been_set"];
